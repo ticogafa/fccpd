@@ -1,0 +1,2 @@
+NAMES         STATUS          PORTS
+desafio2-db   Up 11 seconds   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp

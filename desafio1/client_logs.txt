@@ -1,0 +1,29 @@
+Iniciando client... Vou ficar chamando o servidor web a cada 5 segundos.
+
+[CLIENT] Fazendo requisição para http://web:8080 ...
+{"host":"d7fa0a742388","message":"Ol\u00e1, eu sou o servidor web do Desafio 1","timestamp":"2025-11-26T18:48:06.393010Z"}
+
+
+[CLIENT] Fazendo requisição para http://web:8080 ...
+{"host":"d7fa0a742388","message":"Ol\u00e1, eu sou o servidor web do Desafio 1","timestamp":"2025-11-26T18:48:11.399882Z"}
+
+
+[CLIENT] Fazendo requisição para http://web:8080 ...
+{"host":"d7fa0a742388","message":"Ol\u00e1, eu sou o servidor web do Desafio 1","timestamp":"2025-11-26T18:48:16.405983Z"}
+
+
+[CLIENT] Fazendo requisição para http://web:8080 ...
+{"host":"d7fa0a742388","message":"Ol\u00e1, eu sou o servidor web do Desafio 1","timestamp":"2025-11-26T18:48:21.414839Z"}
+
+
+[CLIENT] Fazendo requisição para http://web:8080 ...
+{"host":"d7fa0a742388","message":"Ol\u00e1, eu sou o servidor web do Desafio 1","timestamp":"2025-11-26T18:48:26.424240Z"}
+
+
+[CLIENT] Fazendo requisição para http://web:8080 ...
+{"host":"d7fa0a742388","message":"Ol\u00e1, eu sou o servidor web do Desafio 1","timestamp":"2025-11-26T18:48:31.433869Z"}
+
+
+[CLIENT] Fazendo requisição para http://web:8080 ...
+{"host":"d7fa0a742388","message":"Ol\u00e1, eu sou o servidor web do Desafio 1","timestamp":"2025-11-26T18:48:36.443007Z"}
+

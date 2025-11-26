@@ -3,9 +3,7 @@
 
 set -e
 
-echo "==================================="
 echo "Desafio 1 - Setup de Rede"
-echo "==================================="
 echo ""
 
 GREEN='\033[0;32m'
@@ -33,9 +31,7 @@ docker build -t desafio1-client ./client/
 echo -e "${GREEN}✓ Imagem 'desafio1-client' construída${NC}"
 
 echo ""
-echo "==================================="
 echo -e "${GREEN}Setup concluído!${NC}"
-echo "==================================="
 echo ""
 echo "Próximos passos:"
 echo "  bash run.sh"

@@ -1,11 +1,7 @@
 #!/bin/bash
-
-
 set -e
 
-echo "==================================="
 echo "Desafio 1 - Limpeza"
-echo "==================================="
 echo ""
 
 GREEN='\033[0;32m'
@@ -24,7 +20,6 @@ docker network rm desafio1-net 2>/dev/null || echo -e "${YELLOW}Rede não encont
 echo -e "${GREEN}✓ Rede removida${NC}"
 
 echo ""
-echo "==================================="
+echo 
 echo -e "${GREEN}Limpeza concluída!${NC}"
-echo "==================================="
 echo ""

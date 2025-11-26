@@ -3,9 +3,7 @@
 
 set -e
 
-echo "==================================="
 echo "Desafio 1 - Iniciando Containers"
-echo "==================================="
 echo ""
 
 GREEN='\033[0;32m'
@@ -13,7 +11,6 @@ BLUE='\033[0;34m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
 
-echo -e "${BLUE}Limpando containers antigos...${NC}"
 docker rm -f desafio1-web desafio1-client 2>/dev/null || true
 
 echo ""
@@ -40,9 +37,7 @@ docker run -d \
 echo -e "${GREEN}✓ Cliente iniciado (fazendo requisições cada 5 segundos)${NC}"
 
 echo ""
-echo "==================================="
 echo -e "${GREEN}Containers em execução!${NC}"
-echo "==================================="
 echo ""
 echo "Visualizar logs:"
 echo "  docker logs -f desafio1-web"

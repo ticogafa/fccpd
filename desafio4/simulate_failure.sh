@@ -16,21 +16,22 @@ sleep 2
 
 echo -e "${YELLOW}Testando service-b (deve indicar erro ao consumir service-a)...${NC}"
 set +e
-curl -s -S http://localhost:5002/report
+HTTP_CODE=$(curl -s -w "%{http_code}" -o /tmp/response.json http://localhost:5001/report)
 RES=$?
 set -e
 
-if [ $RES -ne 0 ]; then
-    echo -e "${GREEN}✓ service-b report falhou como esperado quando service-a está fora${NC}"
+if [ "$HTTP_CODE" = "502" ] || [ $RES -ne 0 ]; then
+    echo -e "${GREEN}✓ service-b retornou erro 502 (Bad Gateway) como esperado quando service-a está fora${NC}"
+    cat /tmp/response.json 2>/dev/null | python3 -m json.tool || true
 else
-    echo -e "${RED}✗ service-b ainda respondeu quando service-a foi reiniciado ou já estava disponível${NC}"
+    echo -e "${RED}✗ service-b ainda respondeu com sucesso (HTTP $HTTP_CODE)${NC}"
 fi
 
 echo -e "${BLUE}Subindo service-a novamente...${NC}"
-docker run -d --name desafio4-service-a --network desafio4-net --network-alias service-a -p 5003:5000 desafio4-service-a
-sleep 2
+docker run -d --name desafio4-service-a --network desafio4-net --network-alias service-a -p 5000:5000 -e USERS_API_URL=http://service-a:5000/users desafio4-service-a
+sleep 3
 
 echo -e "${BLUE}Testando service-b novamente (agora service-a deve estar online)...${NC}"
-curl -s http://localhost:5002/report | python3 -m json.tool || true
+curl -s http://localhost:5001/report | python3 -m json.tool || true
 
 echo -e "${GREEN}Simulação concluída!${NC}"

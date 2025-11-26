@@ -37,6 +37,7 @@ docker run -d \
   --network desafio4-net \
   --network-alias service-b \
   -p 5001:5000 \
+  -e USERS_API_URL=http://service-a:5000/users \
   desafio4-service-b
 
 echo -e "${GREEN}✓ Service B rodando em http://localhost:5001${NC}"

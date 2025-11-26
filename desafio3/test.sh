@@ -16,19 +16,11 @@ sleep 3
 
 echo ""
 
-echo -e "${BLUE}[1/4]${NC} Testando GET / ..."
+echo -e "${BLUE}[1/2]${NC} Testando GET / ..."
 curl -s http://localhost:8000/ | python3 -m json.tool
 echo ""
 
-echo -e "${BLUE}[2/4]${NC} Testando GET /status ..."
-curl -s http://localhost:8000/status | python3 -m json.tool
-echo ""
-
-echo -e "${BLUE}[3/4]${NC} Testando GET /count ..."
-curl -s http://localhost:8000/count | python3 -m json.tool
-echo ""
-
-echo -e "${BLUE}[4/4]${NC} Verificando status dos serviços..."
+echo -e "${BLUE}[2/2]${NC} Verificando status dos serviços..."
 docker compose ps
 
 echo ""

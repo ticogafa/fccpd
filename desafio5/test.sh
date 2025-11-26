@@ -16,19 +16,15 @@ sleep 3
 
 echo ""
 
-echo -e "${BLUE}[1/4]${NC} GET /users via Gateway..."
+echo -e "${BLUE}[1/3]${NC} GET /users via Gateway..."
 curl -s http://localhost:8080/users | python3 -m json.tool 2>/dev/null || curl -s http://localhost:8080/users
 echo ""
 
-echo -e "${BLUE}[2/4]${NC} GET /orders via Gateway..."
+echo -e "${BLUE}[2/3]${NC} GET /orders via Gateway..."
 curl -s http://localhost:8080/orders | python3 -m json.tool 2>/dev/null || curl -s http://localhost:8080/orders
 echo ""
 
-echo -e "${BLUE}[3/4]${NC} GET /status via Gateway..."
-curl -s http://localhost:8080/status | python3 -m json.tool 2>/dev/null || curl -s http://localhost:8080/status
-echo ""
-
-echo -e "${BLUE}[4/4]${NC} Status dos serviços..."
+echo -e "${BLUE}[3/3]${NC} Status dos serviços..."
 docker compose ps
 
 echo ""

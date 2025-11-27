@@ -11,7 +11,6 @@ fccpd/
 ├── desafio3/    # Docker Compose
 ├── desafio4/    # Microsserviços
 ├── desafio5/    # API Gateway
-├── run_all.sh   # Script para executar todos os desafios
 └── README.md    # Este arquivo
 ```
 
